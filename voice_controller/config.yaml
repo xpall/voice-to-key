@@ -1,0 +1,54 @@
+settings:
+  model: tiny
+  language: en
+  confidence_threshold: 0.75
+  cooldown_ms: 800
+  sample_rate: 16000
+  vad_threshold: 0.5
+  vad_silence_duration_ms: 500
+  input_device: 4
+
+commands:
+  - phrases:
+      - next
+      - next page
+      - continue
+    action:
+      key: right
+
+  - phrases:
+      - previous
+      - previous page
+      - back
+    action:
+      key: left
+
+  - phrases:
+      - zoom in
+    action:
+      key: "+"
+
+  - phrases:
+      - zoom out
+    action:
+      key: "-"
+
+  - phrases:
+      - play
+      - pause
+    action:
+      key: space
+
+  - phrases:
+      - new tab
+    action:
+      hotkey:
+        - ctrl
+        - t
+
+  - phrases:
+      - close tab
+    action:
+      hotkey:
+        - ctrl
+        - w
